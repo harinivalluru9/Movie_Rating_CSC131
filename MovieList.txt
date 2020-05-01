@@ -1,0 +1,4 @@
+; ; 0; 0; 0; null; null; null; null
+Doctor Strange; 5.00; Fiction; Benedict Cumberbatch; While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts; Doctor_Strange.jpg; 22/05/17
+T2 Trainspotting; 5.00; Sci-Fi; Andrew Macdonald; After 20 years abroad, Mark Renton returns to Scotland and reunites with his old friends Sick Boy, Spud, and Begbie; T2Trainspotting.jpg; 22/05/17
+Guardians Of The Galaxy; 5.00; Action; Chris Pratt; A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe; GuardiansOfGalaxy.jpg; 22/05/17
