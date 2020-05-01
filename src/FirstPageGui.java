@@ -126,7 +126,7 @@ public class FirstPageGui extends JFrame{
 
 	// Constructor Class which Call The Method Create Gui
 	public FirstPageGui(){
-		super("Movie Rating");
+		super("Select - Rate - Enjoy");
 		setVisible(true);
 		getContentPane().setBackground(Color.LIGHT_GRAY);
 		getContentPane().setLayout(null);
@@ -299,8 +299,8 @@ public class FirstPageGui extends JFrame{
 				System.out.println("inside action performed: " + comboIndex1);
 
 				cmbMoviesActionPerformed(evt);
-     			//lblMoviesTheatreActionPerformed(evt);
-//				lblMoviesTimeActionPerformed(evt);
+//     			lblDirector(evt);
+//     			lblGenre(evt);
 				lblMovieAgeRatingActionPerformed(evt);
 //				lblNoSeatsActionPerformed(evt);
 //				lblTicketPriceActionPerformed(evt);
@@ -332,13 +332,25 @@ public class FirstPageGui extends JFrame{
 		lblActualAgeRating.setFont(new Font ("Times New Roman", Font.BOLD, 12));
 		firstPanel.add(lblActualAgeRating);
 		lblActualAgeRating.setBounds(503,314,110,15);
+		
+
+		// Age Rating Label & The Value It Will Display Depending On The Movie Selected
+		lblGenre.setFont(new Font ("Times New Roman", Font.BOLD, 16));
+		lblGenre.setForeground(Color.WHITE);
+		lblGenre.setText("Genre ");
+		firstPanel.add(lblGenre);
+		lblGenre.setBounds(234,23,70, 324);
+
+		lblActualGenre.setFont(new Font ("Times New Roman", Font.BOLD, 12));
+		firstPanel.add(lblActualGenre);
+		lblActualGenre.setBounds(503,314,110,15);
 
 		// Heading With A Separator Between Movie And Genre Details
-				lblGenre.setFont(new Font("Times New Roman",Font.BOLD,10));
-				lblGenre.setForeground(Color.WHITE);
-				lblGenre.setText("Genre");
-				firstPanel.add(lblGenre);
-				lblGenre.setBounds(18,99,110,15);
+				lblDirector.setFont(new Font("Times New Roman",Font.BOLD,10));
+				lblDirector.setForeground(Color.WHITE);
+				lblDirector.setText("Director");
+				firstPanel.add(lblDirector);
+				lblDirector.setBounds(18,99,110,15);
 
 				firstPanel.add(first_Separator);
 				first_Separator.setBounds(128,109,223,10);
@@ -408,12 +420,13 @@ public class FirstPageGui extends JFrame{
 		
 //		comboIndex1 = 0;
 		// Displays The Image Of The Movie From The ComboBox Depending On The Film Selected
-		for (int i=0; i < comboIndex1; i++){
+//		for (int i=0; i < comboIndex1; i++){
 			String name = movieFile.displayFilmImage(comboIndex1);
 			System.out.println("fds: " + name);
 			lblImgPreview.setIcon(new ImageIcon(getClass().getResource(name))); 
 			lblDateOfFilm.setText(movieFile.displayFilmDate(comboIndex1));
-		}
+			lblGenre.setText(movieFile.displayGenre(comboIndex1));
+//		}
 
 		// If ComboBox is 0 Resets Everything As 0 Is Not A Film
 		if (comboIndex1 == 0){
